@@ -1,0 +1,7 @@
+.prompt {
+  display: none; }
+  .prompt.prompt-open {
+    display: block;
+    color: green; }
+
+/*# sourceMappingURL=prompt.css.map */

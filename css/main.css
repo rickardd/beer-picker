@@ -1,0 +1,226 @@
+html {
+  font-size: 62.5%;
+  /* 10px browser default */ }
+
+body {
+  background-color: #3cb35c;
+  font-family: 'Slabo 27px', serif;
+  font-size: 1.6rem; }
+
+h1, h2, h3 {
+  margin: 0; }
+
+.button {
+  padding: 12px;
+  border-radius: 0;
+  border: none;
+  margin-right: 12px;
+  font-size: 1.4rem;
+  outline: none; }
+  .button:hover {
+    cursor: pointer;
+    transform: translate(0, 2px); }
+
+.button--big {
+  padding: 16px 24px;
+  font-size: 1.8rem; }
+
+.button--white-blue {
+  border: 2px solid #2245b1;
+  background-color: #fff;
+  color: #2245b1; }
+
+.button--blue {
+  border: 2px solid #fff;
+  background-color: #2245b1;
+  color: #fff; }
+
+.button--green {
+  border: 2px solid #fff;
+  background-color: #3cb35c;
+  color: #fff; }
+
+.button--white-green {
+  border: 2px solid #3cb35c;
+  background-color: #fff;
+  color: #3cb35c; }
+
+.button--red {
+  border: 2px solid #fff;
+  background-color: #c30036;
+  color: #fff; }
+
+.home {
+  color: white;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  padding: 24px;
+  width: 500px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  transform: translate(0, 100px);
+  opacity: 0;
+  transition: all .5s ease; }
+
+.home--open {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: all .5s ease; }
+
+.home__headline {
+  font-size: 5rem;
+  margin-bottom: 2px;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.26); }
+
+.home__sub-headline {
+  font-size: 1.8rem;
+  margin-bottom: 24px; }
+
+.home__about {
+  font-size: 2.2rem;
+  margin-bottom: 24px; }
+
+.home__list {
+  font-size: 2.2rem;
+  line-height: 3rem; }
+
+.beer__list {
+  max-width: 700px;
+  margin: 24px auto; }
+
+.beer__item {
+  background-color: #fff;
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+  margin-bottom: 24px;
+  position: relative;
+  min-height: 240px;
+  opacity: 0;
+  transform: translate(100px, 0); }
+  .beer__item.anm-in {
+    transition: all 1s ease;
+    opacity: 1;
+    transform: translate(0, 0); }
+
+.beer__name {
+  font-size: 3rem;
+  margin: 0 0 4px; }
+
+.beer__tag-line {
+  margin: 0;
+  color: #555; }
+
+.beer__description,
+.beer__tips {
+  margin: auto 0;
+  color: #555;
+  line-height: 2.4rem; }
+
+.beer__tips {
+  color: #2245b1;
+  font-size: 2rem; }
+
+.beer__food-paring {
+  font-size: 1.8rem;
+  color: #555;
+  line-height: 3.6rem;
+  margin: 0;
+  padding-left: 16px;
+  margin: auto 0;
+  list-style: square;
+  color: #c30036; }
+
+.beer__image {
+  max-height: 260px;
+  margin: 0 auto;
+  display: block; }
+
+.beer__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.8rem;
+  width: 100%;
+  text-align: center; }
+  .beer__menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    display: block; }
+    .beer__menu a:hover {
+      background-color: #fff;
+      color: #c30036; }
+    .beer__menu a.active {
+      background-color: #fff;
+      color: #c30036; }
+  .beer__menu .fa {
+    margin-right: 6px;
+    display: block;
+    margin-bottom: 4px; }
+
+.grid {
+  display: flex;
+  justify-content: center; }
+
+.grid-image {
+  flex-basis: 100px;
+  display: flex;
+  padding: 24px 0 24px 24px; }
+
+.grid-content {
+  flex-basis: calc( 700px - ( 124px + 100px));
+  padding: 24px; }
+
+.grid-menu {
+  flex-basis: 124px;
+  display: flex;
+  padding: 24px 0;
+  background-color: #c30036; }
+
+.slide-wrapper {
+  position: relative;
+  overflow: hidden;
+  min-height: 186px;
+  margin: 24px 24px 24px 0; }
+
+.view {
+  transform: translate(600px, 0);
+  transition: transform .4s ease-out, opacity .2s;
+  opacity: 0;
+  height: 146px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex; }
+
+.view-in {
+  transform: translate(0, 0);
+  transition: transform .4s ease-out, opacity .2s;
+  opacity: 1; }
+
+.prompt {
+  padding: 24px;
+  position: fixed;
+  top: 100px;
+  margin-left: -300px;
+  width: 600px;
+  background-color: #2245b1;
+  color: #fff;
+  left: 50%;
+  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transform: translate(0, -100px);
+  opacity: 0; }
+  .prompt.prompt-open {
+    transform: translate(0, 0);
+    opacity: 1;
+    transition: all .5s ease; }
+  .prompt.prompt-close {
+    transform: translate(0, 100px);
+    opacity: 0;
+    transition: all .5s ease; }
+  .prompt p {
+    margin-bottom: 24px; }
+
+/*# sourceMappingURL=main.css.map */

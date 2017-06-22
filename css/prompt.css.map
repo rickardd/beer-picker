@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "prompt.css",
+	"sources": [
+		"../scss/prompt.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,OAAO,CAAA;EAEL,OAAO,EAAE,IAAI,GAOd;EATD,AAIE,OAJK,AAIL,YAAa,CAAA;IACX,OAAO,EAAE,KAAK;IACd,KAAK,EAAE,KAAK,GACb"
+}

@@ -1,0 +1,43 @@
+@import './variables';
+
+.button{
+  padding: 12px;
+  border-radius: 0;
+  border: none;
+  margin-right: 12px;
+  font-size: 1.4rem;
+  outline: none;
+  &:hover{
+    cursor: pointer;
+    transform: translate(0, 2px)
+  }
+}
+.button--big{
+  padding: 16px 24px;
+  font-size: 1.8rem;
+}
+.button--white-blue{
+  border: 2px solid $color-blue;
+  background-color: $color-white;
+  color: $color-blue;
+}
+.button--blue{
+  border: 2px solid $color-white;
+  background-color: $color-blue;
+  color: $color-white;
+}
+.button--green{
+  border: 2px solid $color-white;
+  background-color: $color-green;
+  color: $color-white;
+}
+.button--white-green{
+  border: 2px solid $color-green;
+  background-color: $color-white;
+  color: $color-green;
+}
+.button--red{
+  border: 2px solid $color-white;
+  background-color: $color-red;
+  color: $color-white;
+}

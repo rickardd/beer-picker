@@ -1,0 +1,150 @@
+@import './variables';
+
+.beer__list{
+  max-width: 700px;
+  margin: 24px auto;
+}
+
+.beer__item{
+ background-color: #fff;
+ box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.3);
+ margin-bottom: 24px;
+ position: relative;
+ min-height: 240px;
+ opacity: 0;
+ transform: translate( 100px, 0);
+
+ &.anm-in{
+  transition: all 1s ease;
+  opacity: 1;
+  transform: translate( 0, 0)
+ }
+}
+.beer__header{
+
+}
+.beer__name{
+  font-size: 3rem;
+  margin: 0 0 4px;
+}
+.beer__tag-line{
+  margin: 0;
+  color: #555;
+}
+.beer__description,
+.beer__tips{
+ margin: auto 0;
+ color: #555;
+ line-height: 2.4rem;
+}
+
+.beer__tips{
+  color: $color-blue;
+  font-size: 2rem;
+}
+
+.beer__food-paring{
+  font-size: 1.8rem;
+  color: #555;
+  line-height: 3.6rem;
+  margin: 0;
+  padding-left: 16px;
+  margin: auto 0;
+  list-style: square;
+  color: $color-red;
+}
+.beer__image{
+  max-height: 260px;
+  margin: 0 auto;
+  display: block;
+}
+
+.beer__menu{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.8rem;
+  width: 100%;
+  text-align: center;
+
+  a{
+    color: $color-white;
+    text-decoration: none;
+    padding: 12px 24px;
+    display: block;
+
+    &:hover{
+      background-color: $color-white;
+      color: $color-red;
+    }
+
+    &.active{
+      background-color: $color-white;
+      color: $color-red;
+    }
+  }
+
+  .fa{
+    margin-right: 6px;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+}
+
+
+.grid{
+  display: flex;
+  justify-content: center;
+}
+
+
+.grid-image{
+  flex-basis: 100px;
+  display: flex;
+  padding: 24px 0 24px 24px;
+}
+
+.grid-content{
+  flex-basis: calc( 700px - ( 124px + 100px));
+  padding: 24px;
+}
+
+.grid-menu{
+  flex-basis: 124px;
+  display: flex;
+  padding: 24px 0;
+  background-color: $color-red;
+}
+
+
+.slide-wrapper{
+  position: relative;
+  overflow: hidden;
+  min-height: 186px;
+  margin: 24px 24px 24px 0;
+}
+
+
+.view{
+  transform: translate( 600px, 0 );
+  transition: transform .4s ease-out, opacity .2s;
+  opacity: 0;
+  height: 146px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+}
+
+.view-in{
+  transform: translate( 0, 0 );
+  transition: transform .4s ease-out, opacity .2s;
+  opacity: 1;
+}
+
+
+
+

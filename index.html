@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Get the right beer!</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" type="text/css" href="css/vendor/normalize.css">
+        <link rel="stylesheet" type="text/css" href="node_modules/font-awesome/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+          <section class="home" id="home">
+            <header>
+              <h1 class="home__headline">ShareSight & BrewDog</h1>
+              <h2 class="home__sub-headline">Working hard? Craving beer?</h2>
+              <p class="home__about">
+                Don't worry! As well as we know a car needs it's fule a investor needs his/her beer. We made it easy to pick the beer you want.
+              </p>
+              <!-- <ol class="home__list">
+                <li>Investors love beer</li>
+                <li>The best beer depends on time and type of work</li>
+              </ol> -->
+              <button class="button button--blue button--big" id="home-start-button">Try now</button>
+            </header>
+          </section>
+
+          <section class="beer__list" id="beer__list">
+
+          </section>
+
+
+            <!-- TEMPLATE -->
+            <template id="template-beer-item">
+              <article class="beer__item" id="beer__item" data-current-view-index="0">
+
+                <div class="grid">
+                  <div class="grid-image">
+                    <img src="" alt="" class="beer__image">
+                  </div>
+
+                  <div class="grid-content">
+                    <header class="beer__header">
+                      <h1 class="beer__name"></h1>
+                      <p class="beer__tag-line"></p>
+                    </header>
+                    <div class="slide-wrapper">
+                      <div class="view view-in">
+                        <div class="beer__description"></div>
+                      </div>
+                      <div class="view">
+                        <div class="beer__tips"></div>
+                      </div>
+                      <div class="view">
+                        <ul class="beer__food-paring"></ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid-menu">
+                    <ul class="beer__menu">
+                      <li>
+                        <a class="beer__menu-item active" data-view-index="0" href="#" role="button">
+                          <i class="fa fa-beer" aria-hidden="true"></i>
+                          Description
+                        </a>
+                      </li>
+                      <li>
+                        <a class="beer__menu-item" data-view-index="1" href="#" role="button">
+                          <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+                          Tips
+                        </a>
+                      </li>
+                      <li>
+                        <a class="beer__menu-item" data-view-index="2" href="#" role="button">
+                          <i class="fa fa-cutlery" aria-hidden="true"></i>
+                          Food
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </template>
+
+
+
+
+
+
+        <!-- <template id="template-prompt"> -->
+
+          <article class="prompt" id="prompt">
+            <h1>Do you atm work with tax reports?</h1>
+
+            <p>According to our research your work performance will increase <br>by heaps if you drink the right beer.</p>
+
+            <button class="button button--green" id="prompt-yes">YES</button>
+            <button class="button button--red" id="prompt-no">NO</button>
+          </article>
+
+        <!-- </template> -->
+
+
+        <script src="../bundle.js"></script>
+
+
+
+
+
+
+
+    </body>
+</html>
