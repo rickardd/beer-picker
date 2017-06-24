@@ -1,7 +1,6 @@
 @import './variables';
 
 .prompt{
-
   padding: 24px;
   position: fixed;
   top: 100px;
@@ -30,25 +29,4 @@
   p{
     margin-bottom: 24px;
   }
-
-  // .button{
-  //   padding: 12px;
-  //   border-radius: 0;
-  //   background-color: $color-green;
-  //   border: none;
-  //   margin: 0 12px;
-  //   color: $color-white;
-  //   font-size: 1.4rem;
-  // }
-
-  // .button--yes{
-
-  // }
-
-  // .button--no{
-  //   border: 2px solid $color-green;
-  //   background-color: $color-white;
-  //   color: $color-green;
-  // }
-
 }

@@ -3,9 +3,17 @@ html {
   /* 10px browser default */ }
 
 body {
-  background-color: #3cb35c;
+  background-color: #2245b1;
   font-family: 'Slabo 27px', serif;
   font-size: 1.6rem; }
+
+body.color-red {
+  background-color: #c30036;
+  transition: background-color .2s linear; }
+
+body.color-green {
+  background-color: #3cb35c;
+  transition: background-color .2s linear; }
 
 h1, h2, h3 {
   margin: 0; }
@@ -103,7 +111,9 @@ h1, h2, h3 {
 
 .beer__name {
   font-size: 3rem;
-  margin: 0 0 4px; }
+  margin: 0 0 4px;
+  border-bottom: 1px solid #c30036;
+  padding-bottom: 2px; }
 
 .beer__tag-line {
   margin: 0;
@@ -134,25 +144,26 @@ h1, h2, h3 {
   margin: 0 auto;
   display: block; }
 
-.beer__menu {
+.menu {
   list-style: none;
   padding: 0;
   margin: 0;
   font-size: 1.8rem;
   width: 100%;
   text-align: center; }
-  .beer__menu a {
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 24px;
-    display: block; }
-    .beer__menu a:hover {
-      background-color: #fff;
-      color: #c30036; }
-    .beer__menu a.active {
-      background-color: #fff;
-      color: #c30036; }
-  .beer__menu .fa {
+
+.menu__item {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 24px;
+  display: block; }
+  .menu__item:hover {
+    background-color: #fff;
+    color: #c30036; }
+  .menu__item.active {
+    background-color: #fff;
+    color: #c30036; }
+  .menu__item .fa {
     margin-right: 6px;
     display: block;
     margin-bottom: 4px; }

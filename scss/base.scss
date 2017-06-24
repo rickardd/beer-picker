@@ -1,13 +1,24 @@
+@import './variables';
+
 html {
   font-size:62.5%; /* 10px browser default */
 }
 
 body{
-  background-color: #3cb35c;
+  background-color: $color-blue;
   font-family: 'Slabo 27px', serif;
   font-size: 1.6rem;
-
 }
+body.color-red{
+  background-color: $color-red;
+  transition: background-color .2s linear;
+}
+body.color-green{
+  background-color: $color-green;
+  transition: background-color .2s linear;
+}
+
 h1,h2,h3{
   margin: 0;
 }
+

@@ -2,42 +2,45 @@ import $ from 'jquery'
 
 export const promptComponent = ( () => {
 
-  const prompt = document.querySelector('#prompt')
+  const template = document.querySelector('#template-prompt')
+  const DOM = template.content.querySelector('#prompt')
+  const $DOM = $(DOM)
+  const view = document.querySelector('#prompt-view')
 
   // Remove prompt from DOM
   const kill = () => {
-    prompt.remove()
+    view.remove()
   }
   const openPopUp = () => {
-    $(prompt).addClass('prompt-open')
+    view.appendChild(DOM)
+    setTimeout( () => { $DOM.addClass('prompt-open') }, 500 )
   }
   const closePopUp = () => {
     return new Promise( (resolve, reject) => {
       // Wait for css transition to end and then kill() this component.
-      $(prompt).removeClass('prompt-open').addClass('prompt-close').one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", () => {
-        kill()
-        resolve()
+      $DOM.removeClass('prompt-open').addClass('prompt-close')
+        .one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend", () => {
+          kill()
+          resolve()
       })
     })
   }
-
   const bind = () => {
     return new Promise( (resolve, reject) => {
       // YES
-      prompt.querySelector('#prompt-yes').addEventListener('click', () => {
+      DOM.querySelector('#prompt-yes').addEventListener('click', () => {
         closePopUp().then( () => {
           resolve( true )
         })
       })
       // NO
-      prompt.querySelector('#prompt-no').addEventListener('click', () => {
+      DOM.querySelector('#prompt-no').addEventListener('click', () => {
         closePopUp().then( () => {
-          resolve( true )
+          resolve( false )
         })
       })
     })
   }
-
   const open = () => {
     openPopUp()
     return bind()
