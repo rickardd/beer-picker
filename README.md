@@ -1,6 +1,6 @@
 # Beer Picker
 
-Selects beers based on day, time and type of work you are currently doing.
+This application suggests beers based on day, time and type of work you are currently doing.
 
 ## Run project
 
@@ -8,6 +8,10 @@ Selects beers based on day, time and type of work you are currently doing.
 $ npm install
 $ npm start
 http://localhost:8080/
+
+// css files are committed to the repository so following is not required to run the project.
+$ grunt sass
+$ grunt watch
 ```
 
 ## How I tackled the problem
@@ -21,7 +25,7 @@ Once I understood the project description and the api, I thought about...
 
 ### Target group
 
-My target group is investors who loves trying new beers without feeling it's a rocket science.
+My target group is investors who loves trying new beers without feeling it's rocket science.
 Drinking and picking beer should be easy and fun. He/she likes modern web applications.
 
 ### Key words
@@ -32,8 +36,8 @@ Drinking and picking beer should be easy and fun. He/she likes modern web applic
 
 ### Feeling of the app and UI.
 
-To target the keywords I went for... ***"Material design"*** (with sharp edges, sharp strong shadows, and vibrant),
-***"Card design"*** (like pinterest.com and many other sites today), ***Animations*** (Animations plays a big part to create a good feeling and make it feel modern and fun).
+To target the keywords I went for... ***"Material design"*** (with sharp edges, sharp strong shadows, and vibrant colours),
+***"Card design"*** (like pinterest.com and many other sites today), ***Animations*** (Animations plays a big part to give the feeling of modern and fun).
 
 ### Structure and UX
 
@@ -41,8 +45,8 @@ To target the first keyword easy I wanted to take the user on a one-way-journey 
 - Enter the site.
 - Explanation what the app is about.
 - Only one call-to-action. "Try".
-- Ask if the user if he/she is running tax reports.
-- List all the items.
+- Ask the user if he/she is working with tax reports.
+- List suggested beers.
 
 When presenting each beer I picket the most interesting facts about the beer. Again, it should be easy and not rocket
 science to pick a beer.
@@ -50,7 +54,7 @@ science to pick a beer.
 ### Technologies
 
 I did consider using Angular2 or React.
-But in order to show more code and solutions I decided to not rely on a framework. I made it with Vanilla JavasCript and jQuery when it was needed. jQuery only for Ajax and some trickier DOM-requests.
+But in order to show more code and solutions I decided to not rely on a framework. I made it with JavasCript and some jQuery.
 
 Project setup...
 - Webpack
@@ -76,28 +80,32 @@ The beer-list itself animates each beer-item in to the stage like a waterfall ef
 
 ## Problems and solutions
 
-- ***Problem:*** Populate the DOM with a complex html structure
-- ***Solution:*** By using the html ``<template>`` tag (which are not rendered in the DOM) I can create the markup within, then then clone the markup, populate it with the new content and at last append the new node to the DOM.
+### Handling different views
+<!-- - ***Problem:*** Populate the DOM with a complex html structure -->
+- ***Solution:*** By using the html ``<template>`` tag (which are not rendered in the DOM) I can create the markup within, then clone the markup, populate and append the DOM.
 
-- ***Problem:*** Controlling the flow. displaying views like home-page, prompt, list of beers; based on actions
-- ***Solution:*** By using promises I could easily control what is happening when.
+### Controlling the flow. Displaying and killing right view after action.
+<!-- - ***Problem:*** Controlling the flow. displaying views like home-page, prompt, list of beers; based on actions -->
+- ***Solution:*** By using promises I could easily control what is happening when. Consider...
 
 ```
+// index.html
 const start = () => {
   homeComponent.init()
   .then( () => {
     promptComponent.open()
       .then( ( answer ) => {
-          beerComponent.init( answer )
+          beerListComponent.init( answer )
       })
   })
 }
-setTimeout( () => {start()}, 500 ) // Delays the start page and it's animation with 500ms
 ```
 
-Following code waits for two promises, user-click-on-button and component animation complete. This prevents the animations to conflict with each other and that the fist component is unmounted before the next starts...
+Following code waits for two promises, button-click and animation complete.
 
 ```
+// home_component.js
+
   const close = () => {
     return new Promise( (resolve, reject) => {
       // Wait for css transition to end and then kill() this component.
@@ -126,9 +134,7 @@ Following code waits for two promises, user-click-on-button and component animat
 
 ## Browser support
 
-The app is tested on Firefox and Chrome on a Mac.
-IE 11 would need a polyfill to support the html5 ``<template>`` tag.
-Babel to target ES5 with ES6 features.
+The application is tested on Firefox and Chrome on a Mac.
 
 
 
